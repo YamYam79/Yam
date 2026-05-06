@@ -1,0 +1,23 @@
+info:
+  name: PUT Book
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: http://localhost:8080/books/1
+  body:
+    type: json
+    data: |-
+      {
+        "title" : "Voyage à l'infini",
+        "description" : "La terre",
+        "available" : true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
